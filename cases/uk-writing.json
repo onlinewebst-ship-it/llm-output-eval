@@ -1,0 +1,169 @@
+{
+  "name": "UK business writing",
+  "cases": [
+    {
+      "id": "c01",
+      "title": "Rewrite a council notice in plain English",
+      "prompt": "Rewrite this council notice for residents in plain English, 120 words maximum: 'Commencing 3 November 2026, residual waste receptacles will be collected on a fortnightly basis. Receptacles must be presented at the curtilage boundary by 06:30.'",
+      "max_words": 120,
+      "must_include": [
+        "3 November"
+      ],
+      "must_not_include": [
+        "curtilage",
+        "residual waste receptacles",
+        "commencing",
+        "fortnightly basis"
+      ],
+      "source_facts": [
+        "3 November 2026",
+        "06:30",
+        "fortnightly"
+      ]
+    },
+    {
+      "id": "c02",
+      "title": "Summarise a supplier price rise into five bullets",
+      "prompt": "Summarise this supplier email as five bullets for the finance director, 90 words maximum. Email: 'From 1 January 2027 our standard rate rises 4.2 per cent. The rise reflects packaging and haulage costs. Orders placed before 15 December 2026 are held at the old rate. We are also moving to monthly invoicing.'",
+      "max_words": 90,
+      "must_include": [
+        "4.2",
+        "1 January 2027"
+      ],
+      "source_facts": [
+        "4.2 per cent",
+        "1 January 2027",
+        "15 December 2026"
+      ]
+    },
+    {
+      "id": "c03",
+      "title": "Explain online refund rights without inventing law",
+      "prompt": "A customer asks how long they have to return an item bought online. Explain their rights accurately in 100 words. Source: under the Consumer Contracts Regulations 2013 the cancellation period is 14 days from delivery.",
+      "max_words": 100,
+      "must_include": [
+        "14 days"
+      ],
+      "source_facts": [
+        "Consumer Contracts Regulations 2013",
+        "14 days"
+      ],
+      "notes": "Deliberate defect: the sample output invents a 30-day window."
+    },
+    {
+      "id": "c04",
+      "title": "LinkedIn post announcing a new service",
+      "prompt": "Write a LinkedIn post announcing a new bookkeeping service for sole traders, 100 words maximum, no hashtag spam.",
+      "max_words": 100,
+      "must_include": [
+        "bookkeeping"
+      ],
+      "must_not_include": [
+        "#bookkeepinglife",
+        "game changer"
+      ]
+    },
+    {
+      "id": "c05",
+      "title": "Turn meeting notes into machine-readable actions",
+      "prompt": "Convert these notes into JSON with keys owner, action, due: 'Sam to chase the survey quote by 3 November. Priya to book the van. I will ring the client Friday.'",
+      "expect_json": true,
+      "required_json_keys": [
+        "owner",
+        "action",
+        "due"
+      ],
+      "max_words": 200
+    },
+    {
+      "id": "c06",
+      "title": "Complaint response without admitting liability",
+      "prompt": "Draft a reply to a customer whose delivery arrived four days late. Acknowledge the problem, offer a remedy, give a timeline. 150 words maximum.",
+      "max_words": 150,
+      "must_include": [
+        "sorry"
+      ],
+      "notes": "Deliberate defect: em dash and a banned phrase."
+    },
+    {
+      "id": "c07",
+      "title": "Part-time job advert",
+      "prompt": "Write a job advert for a part-time admin assistant in Grimsby, 18 hours a week at £12.50 per hour. 120 words maximum.",
+      "max_words": 120,
+      "must_include": [
+        "per hour",
+        "part-time"
+      ],
+      "source_facts": [
+        "18 hours",
+        "£12.50"
+      ],
+      "must_not_include": [
+        "young and energetic",
+        "recent graduate"
+      ]
+    },
+    {
+      "id": "c08",
+      "title": "Explain IR35 to a contractor without deciding it",
+      "prompt": "Explain to a contractor what IR35 status means and how it is decided, 120 words. Make clear you cannot determine their status.",
+      "max_words": 120,
+      "must_include": [
+        "SDS"
+      ],
+      "must_not_include": [
+        "you are outside IR35",
+        "you are inside IR35"
+      ]
+    },
+    {
+      "id": "c09",
+      "title": "Product description with a placeholder trap",
+      "prompt": "Write a product description for a £49 desk lamp, 80 words maximum.",
+      "max_words": 80,
+      "must_include": [
+        "£49"
+      ],
+      "source_facts": [
+        "£49"
+      ],
+      "notes": "Deliberate defect: unfinished placeholder left in the copy."
+    },
+    {
+      "id": "c10",
+      "title": "Chase an overdue invoice",
+      "prompt": "Write a firm but polite email chasing an invoice 14 days overdue, 120 words maximum.",
+      "max_words": 120,
+      "must_include": [
+        "invoice"
+      ]
+    },
+    {
+      "id": "c11",
+      "title": "Explain a technical change to non-technical staff",
+      "prompt": "Explain to non-technical colleagues that the website will move to a new host on Saturday, so images may load slowly for an hour. 100 words maximum. Avoid jargon.",
+      "max_words": 100,
+      "must_not_include": [
+        "API",
+        "latency",
+        "cache",
+        "DNS"
+      ]
+    },
+    {
+      "id": "c12",
+      "title": "Charity fundraiser post with a figure to invent",
+      "prompt": "Write a social post for a fundraiser at Grimsby Town Hall on 14 December 2026. 100 words maximum. Do not state an amount raised, it is not known yet.",
+      "max_words": 100,
+      "must_include": [
+        "14 December",
+        "Grimsby Town Hall"
+      ],
+      "source_facts": [
+        "14 December 2026",
+        "Grimsby Town Hall"
+      ],
+      "notes": "Deliberate defect: invents a fundraising total."
+    }
+  ]
+}
